@@ -9,6 +9,9 @@ module.exports = {
     ERROR_CLIENT_CODE: 400,
     ERROR_SERVER_CODE: 500,
 
+    /*****  ROUTES for request  *****/        
+    POST_PUBLICATION: '/',    
+
     /***** MESSAGES *****/    
     // success
     SUCCESS_MESSAGE: "INFORMACION ENCONTRADA",
