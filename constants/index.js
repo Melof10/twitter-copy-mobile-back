@@ -23,6 +23,7 @@ module.exports = {
     GET_PUBLICATIONS: '/',
     GET_PUBLICATION: '/:id',
     PUT_PUBLICATION: '/:id',
+    DELETE_PUBLICATION: '/:id',
 
     /***** MESSAGES *****/    
     // success

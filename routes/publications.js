@@ -4,13 +4,15 @@ const {
     POST_PUBLICATION, 
     GET_PUBLICATIONS, 
     GET_PUBLICATION,
-    PUT_PUBLICATION 
+    PUT_PUBLICATION,
+    DELETE_PUBLICATION 
 } = require('../constants');
 const { 
     createPublication, 
     getPublications, 
     getPubliacation,
-    updatePublication 
+    updatePublication,
+    deletePublication
 } = require('../controllers/publicationController');
 const { publicationValidate, validate } = require('../middlewares/validatePublication');
 
@@ -25,5 +27,8 @@ router.get(GET_PUBLICATION, getPubliacation);
 
 /* UPDATE publication */
 router.put(PUT_PUBLICATION, updatePublication);
+
+/* DELETE publication */
+router.delete(DELETE_PUBLICATION, deletePublication);
 
 module.exports = router;
