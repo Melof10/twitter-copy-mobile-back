@@ -25,7 +25,7 @@ exports.getPublications = async(req, res) => {
 
 exports.getPubliacation = async(req, res) => {
     try {
-        const publication = await getOne(req,params.id);
+        const publication = await getOne(req.params.id);
         publication ? responseSuccess(res, publication) : responseErrorClient(res);
     } catch (error) {
         responseErrorServer(res, error);
