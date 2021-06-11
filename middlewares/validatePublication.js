@@ -1,5 +1,10 @@
 const { body, validationResult } = require('express-validator');
-const { ERROR_NOT_EMPTY, errorMinCharacters, errorMaxCharacters } = require('../constants');
+const { 
+    ERROR_NOT_EMPTY, 
+    ERROR_VALIDATE_MIDDLEWARE,
+    errorMinCharacters, 
+    errorMaxCharacters 
+} = require('../constants');
 
 exports.publicationValidate = () => {
     return[
@@ -22,7 +27,7 @@ exports.validate = (req, res, next) => {
     const extractedErrors = [];
     errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }));
 
-    return res.status(422).json({
+    return res.status(ERROR_VALIDATE_MIDDLEWARE).json({
         errors: extractedErrors,
     });
 }

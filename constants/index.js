@@ -16,6 +16,7 @@ module.exports = {
     SUCCESS_CODE: 200,
     ERROR_CLIENT_CODE: 400,
     ERROR_SERVER_CODE: 500,
+    ERROR_VALIDATE_MIDDLEWARE: 422,
 
     /*****  ROUTES for request  *****/        
     POST_PUBLICATION: '/',    
