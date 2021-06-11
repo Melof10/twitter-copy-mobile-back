@@ -12,16 +12,6 @@ To install dependencies, run
 npm install
 ```
 
-3) Migrations:
-``` bash
-npx sequelize-cli db:migrate
-```
-
-4) Seeders:
-``` bash
-npx sequelize-cli db:seed:all
-```
-
 ## Start local server
 
 ``` bash
