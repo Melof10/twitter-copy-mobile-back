@@ -16,3 +16,7 @@ exports.getOne = async(id) => {
 exports.update = async(id, data) => {
     return await Publication.findByIdAndUpdate(id, data, { new: true });
 }
+
+exports.delete = async(id) => {
+    return await Publication.findByIdAndDelete(id);
+}
