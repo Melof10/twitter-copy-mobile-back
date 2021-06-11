@@ -1,4 +1,4 @@
-const { create, getAll, getOne } = require('../querys/publications');
+const { create, getAll, getOne, update } = require('../querys/publications');
 const { 
     responseSuccess, 
     responseErrorClient, 
@@ -26,6 +26,15 @@ exports.getPublications = async(req, res) => {
 exports.getPubliacation = async(req, res) => {
     try {
         const publication = await getOne(req.params.id);
+        publication ? responseSuccess(res, publication) : responseErrorClient(res);
+    } catch (error) {
+        responseErrorServer(res, error);
+    }
+}
+
+exports.updatePublication = async(req, res) => {
+    try {
+        const publication = await update(req.params.id, req.body);
         publication ? responseSuccess(res, publication) : responseErrorClient(res);
     } catch (error) {
         responseErrorServer(res, error);
