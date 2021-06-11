@@ -1,5 +1,13 @@
 const { development } = require('../config/config');
 
+const errorMinCharacters = (character) => {
+    return `Este campo debe tener mínimo ${character} carácteres`;
+};
+
+const errorMaxCharacters = (character) => {
+    return `Este campo debe tener máximo ${character} carácteres`;
+};
+
 module.exports = {
     /***** CONNECT MONGODB *****/
     MONGODB_URI: development.host +':'+ development.port +'/'+ development.database,
@@ -18,4 +26,7 @@ module.exports = {
     // failed
     ERROR_SERVER: "ERROR EN EL SERVIDOR",
     ERROR_DATA_NOT_FOUND_MESSAGE: "NO SE ENCONTRÓ LA INFORMACION SOLICITADA",
+    ERROR_NOT_EMPTY: "Este campo es requerido",
+    errorMinCharacters,
+    errorMaxCharacters,
 }

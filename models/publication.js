@@ -8,9 +8,6 @@ const publicationSchema = new mongoose.Schema({
     text: {
         type: String
     },
-    file: {
-        type: String
-    },
     createdAt: {
         type: Date,
         default: new Date()
