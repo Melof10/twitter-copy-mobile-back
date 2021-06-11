@@ -19,7 +19,8 @@ module.exports = {
     ERROR_VALIDATE_MIDDLEWARE: 422,
 
     /*****  ROUTES for request  *****/        
-    POST_PUBLICATION: '/',    
+    POST_PUBLICATION: '/', 
+    GET_PUBLICATIONS: '/',
 
     /***** MESSAGES *****/    
     // success
