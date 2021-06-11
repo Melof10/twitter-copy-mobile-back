@@ -3,12 +3,14 @@ var router = express.Router();
 const { 
     POST_PUBLICATION, 
     GET_PUBLICATIONS, 
-    GET_PUBLICATION 
+    GET_PUBLICATION,
+    PUT_PUBLICATION 
 } = require('../constants');
 const { 
     createPublication, 
     getPublications, 
-    getPubliacation 
+    getPubliacation,
+    updatePublication 
 } = require('../controllers/publicationController');
 const { publicationValidate, validate } = require('../middlewares/validatePublication');
 
@@ -20,5 +22,8 @@ router.get(GET_PUBLICATIONS, getPublications);
 
 /* GET ONE publication */
 router.get(GET_PUBLICATION, getPubliacation);
+
+/* UPDATE publication */
+router.put(PUT_PUBLICATION, updatePublication);
 
 module.exports = router;

@@ -22,6 +22,7 @@ module.exports = {
     POST_PUBLICATION: '/', 
     GET_PUBLICATIONS: '/',
     GET_PUBLICATION: '/:id',
+    PUT_PUBLICATION: '/:id',
 
     /***** MESSAGES *****/    
     // success

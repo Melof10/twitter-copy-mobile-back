@@ -14,5 +14,5 @@ exports.getOne = async(id) => {
 }
 
 exports.update = async(id, data) => {
-    return await Publication.findByIdAndUpdate(id, data);
+    return await Publication.findByIdAndUpdate(id, data, { new: true });
 }
