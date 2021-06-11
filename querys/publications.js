@@ -8,3 +8,7 @@ exports.create = async(data) => {
 exports.getAll = async() => {
     return await Publication.find();
 }
+
+exports.getOne = async(id) => {
+    return await Publication.findById(id);
+}
