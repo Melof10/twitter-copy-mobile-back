@@ -4,9 +4,6 @@
 ## Envinroment setup
 
 1) Create database 
-``` mongodb
-CREATE DATABASE nameDatabase
-```
 
 2) Copy .env.example to .env and fill with database credentials.
 
