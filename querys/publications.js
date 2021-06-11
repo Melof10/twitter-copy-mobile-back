@@ -12,3 +12,7 @@ exports.getAll = async() => {
 exports.getOne = async(id) => {
     return await Publication.findById(id);
 }
+
+exports.update = async(id, data) => {
+    return await Publication.findByIdAndUpdate(id, data);
+}
