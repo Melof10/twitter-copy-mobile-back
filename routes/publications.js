@@ -3,13 +3,15 @@ var router = express.Router();
 const { 
     POST_PUBLICATION, 
     GET_PUBLICATIONS, 
+    GET_PUBLICATIONS_USER,
     GET_PUBLICATION,
     PUT_PUBLICATION,
     DELETE_PUBLICATION 
 } = require('../constants');
 const { 
     createPublication, 
-    getPublications, 
+    getPublications,
+    getPublicationsByUser, 
     getPublication,
     updatePublication,
     deletePublication
@@ -21,6 +23,9 @@ router.post(POST_PUBLICATION, publicationValidate(), validate, createPublication
 
 /* GET ALL publications */
 router.get(GET_PUBLICATIONS, getPublications);
+
+/* GET ALL publications users */
+router.get(GET_PUBLICATIONS_USER, getPublicationsByUser);
 
 /* GET ONE publication */
 router.get(GET_PUBLICATION, getPublication);

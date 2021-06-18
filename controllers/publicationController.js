@@ -1,4 +1,4 @@
-const { create, getAll, getOne, update, remove } = require('../querys/publications');
+const { create, getAll, getAllByUser, getOne, update, remove } = require('../querys/publications');
 const { 
     responseSuccess, 
     responseErrorClient, 
@@ -16,7 +16,16 @@ exports.createPublication = async(req, res) => {
 
 exports.getPublications = async(req, res) => {
     try {                
-        const publications = await getAll(req.params.user);
+        const publications = await getAll();
+        publications ? responseSuccess(res, publications) : responseErrorClient(res);
+    } catch (error) {
+        responseErrorServer(res, error);
+    }
+}
+
+exports.getPublicationsByUser = async(req, res) => {
+    try {                
+        const publications = await getAllByUser(req.params.user);
         publications ? responseSuccess(res, publications) : responseErrorClient(res);
     } catch (error) {
         responseErrorServer(res, error);

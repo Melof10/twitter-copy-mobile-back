@@ -5,7 +5,11 @@ exports.create = async(data) => {
     return await Publication.create(data);
 }
 
-exports.getAll = async(userId) => {
+exports.getAll = async() => {
+    return await Publication.find();
+}
+
+exports.getAllByUser = async(userId) => {
     return await Publication.find({
         user: userId
     });
