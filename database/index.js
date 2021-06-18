@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const { MONGODB_URI } = require('../constants');
 
 // import models
-const User = require('../models/publication');
+const Publication = require('../models/publication');
+const User = require('../models/user');
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
@@ -15,5 +16,6 @@ mongoose.connect(MONGODB_URI, {
 
 
 module.exports = {
+    Publication,
     User
 }

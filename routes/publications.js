@@ -23,7 +23,7 @@ router.post(POST_PUBLICATION, publicationValidate(), validate, createPublication
 router.get(GET_PUBLICATIONS, getPublications);
 
 /* GET ONE publication */
-router.get(GET_PUBLICATION, getPubliacation);
+router.get(GET_PUBLICATION, getPublication);
 
 /* UPDATE publication */
 router.put(PUT_PUBLICATION, updatePublication);
