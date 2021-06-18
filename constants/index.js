@@ -18,12 +18,19 @@ module.exports = {
     ERROR_SERVER_CODE: 500,
     ERROR_VALIDATE_MIDDLEWARE: 422,
 
-    /*****  ROUTES for request  *****/        
+    /*****  ROUTES for request  *****/   
+    // publications     
     POST_PUBLICATION: '/', 
     GET_PUBLICATIONS: '/',
     GET_PUBLICATION: '/:id',
     PUT_PUBLICATION: '/:id',
     DELETE_PUBLICATION: '/:id',
+    // user
+    POST_USER: '/', 
+    GET_USERS: '/',
+    GET_USER: '/:id',
+    PUT_USER: '/:id',
+    DELETE_USER: '/:id',
 
     /***** MESSAGES *****/    
     // success

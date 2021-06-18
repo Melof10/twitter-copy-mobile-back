@@ -23,7 +23,7 @@ exports.getPublications = async(req, res) => {
     }
 }
 
-exports.getPubliacation = async(req, res) => {
+exports.getPublication = async(req, res) => {
     try {
         const publication = await getOne(req.params.id);
         publication ? responseSuccess(res, publication) : responseErrorClient(res);

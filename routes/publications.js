@@ -10,7 +10,7 @@ const {
 const { 
     createPublication, 
     getPublications, 
-    getPubliacation,
+    getPublication,
     updatePublication,
     deletePublication
 } = require('../controllers/publicationController');
