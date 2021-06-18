@@ -12,13 +12,7 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String
-    },
-    publications: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Publication'
-        }
-    ]
+    }
 })
 
 mongoose.model('User', userSchema);
