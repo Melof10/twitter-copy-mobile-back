@@ -15,8 +15,8 @@ exports.createPublication = async(req, res) => {
 }
 
 exports.getPublications = async(req, res) => {
-    try {
-        const publications = await getAll();
+    try {                
+        const publications = await getAll(req.params.user);
         publications ? responseSuccess(res, publications) : responseErrorClient(res);
     } catch (error) {
         responseErrorServer(res, error);

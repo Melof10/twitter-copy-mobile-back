@@ -20,8 +20,10 @@ exports.create = async(data) => {
     return null;
 }
 
-exports.getAll = async() => {
-    return await Publication.find();
+exports.getAll = async(userId) => {
+    return await Publication.find({
+        user: userId
+    });
 }
 
 exports.getOne = async(id) => {

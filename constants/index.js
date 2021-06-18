@@ -21,7 +21,7 @@ module.exports = {
     /*****  ROUTES for request  *****/   
     // publications     
     POST_PUBLICATION: '/', 
-    GET_PUBLICATIONS: '/',
+    GET_PUBLICATIONS: '/:user',
     GET_PUBLICATION: '/:id',
     PUT_PUBLICATION: '/:id',
     DELETE_PUBLICATION: '/:id',
